@@ -1,6 +1,6 @@
 {
     "/api/*":{
-        "target":" https://temp-app-ravisingh.herokuapp.com"
+        "target":"https://temp-app-ravisingh.herokuapp.com"
         ,
         "pathRewrite":{
             "^/api":""
