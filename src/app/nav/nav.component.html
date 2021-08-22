@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand fs-4" href="#"><b>Venturepact</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link active " aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light " href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light  " href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <!-- <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light " type="submit">Search</button>
+          
+        </form> -->
+
+      <!-- <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item  ">
+            <br> -->
+      <div class="d-flex  ">
+        &nbsp;&nbsp;
+        <a class=" mt-1 text-light btn btn-outline-light  " type="submit" routerLink="/" style="font-size: 14px;">
+          <!-- <a routerLinkActive="active" class="mt-2 ml-3 btn btn-outline-light h4 nav-link "role="button" aria-expanded="false" type="submit" (click)="logoutUser()"> -->
+          Register
+        </a>&nbsp;&nbsp;
+        <!-- <a class="nav-link " href="/login" id="navbarScrollingDropdown" role="button" aria-expanded="false"> -->
+        <a *ngIf="!userLogged"  class="mt-1 nav-link  text-light  btn btn-outline-light "
+          type="submit" routerLink="/home" style="font-size: 14px;">Sign in</a>
+        <a *ngIf="userLogged" class=" mt-1 text-light btn btn-outline-light  " type="submit" (click)="logoutUser()"
+          style="font-size: 14px;">
+          <!-- <a routerLinkActive="active" class="mt-2 ml-3 btn btn-outline-light h4 nav-link "role="button" aria-expanded="false" type="submit" (click)="logoutUser()"> -->
+          Sign out
+        </a>
+        <!-- </li>
+        </ul> -->
+      </div>
+    </div>
+  </div>
+</nav>

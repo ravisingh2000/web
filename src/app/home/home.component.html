@@ -1,0 +1,72 @@
+<div>
+  <div class=" container-fluid d-flex justify-content-center mt-4 ">
+  
+    <div class="mt-4 tab-content shadow-lg p-3 mb-3 bg-light rounded bg-opacity-50" id="myTabContent"
+      style="width: 600px;height: 490px;">
+
+      <b class="fs-2 ms-4"> Register</b>
+      <form role="form" #submit="ngForm" (ngSubmit)="getter(submit)" >
+        <div class="row p-3 mt-2">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input type="text" ngModel pattern="[a-zA-Z]{1,26}" name="firstname" id="firstname"
+                class="form-control input-sm" placeholder="First Name" value="" required autocomplete="off"
+                #firstname="ngModel">
+            </div>
+            <div class="alert  alert-danger " *ngIf="firstname.invalid && firstname.touched">
+                  Enter valid Firstname
+            </div>
+
+
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input type="text" ngModel pattern="[a-zA-Z]{1,26}" name="lastname" id="last_name" class="form-control input-sm"
+                placeholder="Last Name" value=""  #lastname="ngModel" required>
+            </div>
+            <div class="alert  alert-danger " *ngIf="lastname.invalid && lastname.touched">
+              Enter valid Lastname
+            </div>
+          </div>
+          
+
+        </div>
+
+
+        <div class="form-group p-3">
+          <input type="email" ngModel pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" id="email" class="form-control input-sm"
+            placeholder="Email Address" value="" required  #email="ngModel">
+        </div>
+        <div class="alert  alert-danger" *ngIf="email.invalid && email.touched">
+          Enter valid Email
+        </div>
+
+        <!-- <div class="row p-3"> -->
+        <!-- <div class="col-xs-6 col-sm-6 col-md-6"> -->
+        <div class="form-group p-3">
+          <input type="password" ngModel name="password" id="password" class="form-control input-sm"
+            placeholder="Password" value="" required #password="ngModel">
+        </div>
+        <div class="alert  alert-danger" *ngIf="password.invalid && password.touched ">
+          this is not valid
+        </div>
+      
+        <div class="form-group p-3 ">
+          <input type="password" ngModel name="cnpassword" id="password_confirmation"
+            class="form-control input-sm" placeholder="Confirm Password" value="" required   #cnpassword="ngModel">
+        </div>
+        <div class="alert  alert-danger" *ngIf="cnpassword.touched && password.value!=cnpassword.value">
+              Password Not Matched!
+        </div>
+
+        <div class="row p-3">
+           <button class="btn btn-primary" [disabled]="submit.invalid">Register</button>
+           </div>
+      </form>
+
+      <b class="fs-4 ms-5"> Have already an account? <a href="/home">Login Here</a></b>
+    </div>
+  </div>
+  <div>
+    <br><br>
+  </div>
