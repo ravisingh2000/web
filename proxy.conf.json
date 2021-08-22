@@ -1,6 +1,6 @@
 {
     "/api/*":{
-        "target":"https://meandataip.herokuapp.com/"
+        "target":" https://temp-app-ravisingh.herokuapp.com"
         ,
         "pathRewrite":{
             "^/api":""
