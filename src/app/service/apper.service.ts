@@ -55,7 +55,7 @@ export class ApperService {
   }
 
   userStatusApi() {
-    return this.http.get('/api/valid')
+    return this.http.get('https://meandata.herokuapp.com/valid')
   }
 
   reloadApii(data: any) {
